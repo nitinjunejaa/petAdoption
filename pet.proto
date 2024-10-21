@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package petadoption;
+
+message Pet {
+    string name = 1;
+    int32 age = 2;
+    string gender = 3;
+    string breed = 4;
+    bytes photo = 5; // Store photo as bytes
+}
+
+message AddPetRequest {
+    Pet pet = 1;
+}
+
+message GetPetRequest {
+    string characteristic = 1; // Can be name, breed, etc.
+}
+
+message PetResponse {
+    Pet pet = 1;
+}
+
+service PetService {
+    rpc AddPet(AddPetRequest) returns (PetResponse);
+    rpc GetPet(GetPetRequest) returns (PetResponse);
+}
