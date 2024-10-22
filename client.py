@@ -23,7 +23,7 @@ def add_pet(stub, name, age, gender, breed, photograph_path):
 def run():
     with grpc.insecure_channel('localhost:50051') as channel:
         stub = pet_pb2_grpc.PetServiceStub(channel)
-        add_pet(stub, "Buddy", 3, "Male", "Golden Retriever", "/home/fj/Documents/petAdoptionSystem/buddy.jpg")  # Ensure correct path and extension
+        add_pet(stub, "Buddy", 3, "Male", "Golden Retriever", "/home/freyajindal22/Documents/petAdoption/buddy.jpg") 
 
 if __name__ == '__main__':
     run()

@@ -5,7 +5,7 @@ import time
 import pet_pb2
 import pet_pb2_grpc
 
-# In-memory storage for pets
+
 pets = {}
 
 class PetService(pet_pb2_grpc.PetServiceServicer):
